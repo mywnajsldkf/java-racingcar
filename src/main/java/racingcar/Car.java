@@ -4,8 +4,9 @@ public class Car {
     private final String name;
     private int position = 0;
 
-    public Car(String name) {
+    public Car(String name) throws Exception {
         this.name = name;
+        validateName(name);
     }
 
     public void validateName(String name) throws Exception {
