@@ -8,5 +8,11 @@ public class Car {
         this.name = name;
     }
 
+    public void validateName(String name) throws Exception {
+        if(name.length() > 5) {
+            throw new Exception("이름이 5자 초과입니다.");
+        }
+    }
+
     // 추가 기능 구현
 }
