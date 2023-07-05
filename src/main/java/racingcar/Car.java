@@ -9,6 +9,19 @@ public class Car {
         validateName(name);
     }
 
+    public void moveForwardPosition(int randomNumber){
+        if (determineMove(randomNumber)){
+            this.position += 1;
+        }
+    }
+
+    private boolean determineMove(int randomNumber){
+        if (randomNumber >= 4) {
+            return true;
+        }
+        return false;
+    }
+
     public void validateName(String name) throws Exception {
         if(name.length() > 5) {
             throw new Exception("이름이 5자 초과입니다.");
