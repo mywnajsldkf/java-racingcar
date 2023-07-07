@@ -57,4 +57,15 @@ class CarTest {
         //then
         assertEquals(expectedValue, positionValue);
     }
+
+    @Test
+    @DisplayName("리스트의 크기와 입력값의 갯수와 같으면 성공한다.")
+    void success_ifListSizeEqualToInputAmount() throws Exception {
+        //given
+        String carName = "tami,danny,ray";
+        Cars testCars = new Cars(carName);
+        //when
+        //then
+        assertEquals(testCars.cars.size(),carName.split(",").length);
+    }
 }
