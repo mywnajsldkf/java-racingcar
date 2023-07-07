@@ -36,7 +36,7 @@ class CarTest {
         Field testPosition = carTest.getClass().getDeclaredField("position");
         testPosition.setAccessible(true);
         //when
-        carTest.moveForwardPosition(randomNumber);
+        carTest.movePosition(randomNumber);
         int positionValue = (int) testPosition.get(carTest);
         //then
         assertEquals(expectedValue, positionValue);
@@ -52,7 +52,7 @@ class CarTest {
         Field testPosition = carTest.getClass().getDeclaredField("position");
         testPosition.setAccessible(true);
         //when
-        carTest.moveForwardPosition(randomNumber);
+        carTest.movePosition(randomNumber);
         int positionValue = (int) testPosition.get(carTest);
         //then
         assertEquals(expectedValue, positionValue);
