@@ -9,10 +9,11 @@ public class Car {
         validateName(name);
     }
 
-    public void moveForwardPosition(int randomNumber){
+    public int movePosition(int randomNumber){
         if (determineMove(randomNumber)){
             this.position += 1;
         }
+        return this.position;
     }
 
     private boolean determineMove(int randomNumber){
